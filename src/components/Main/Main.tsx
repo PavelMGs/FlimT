@@ -189,6 +189,7 @@ const Main = () => {
                         type="primary"
                         size="large"
                         className={s.button}
+                        
                     >
                         <img src={CartWH} alt="" />
                         Buy

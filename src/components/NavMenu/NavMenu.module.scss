@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-@media (max-width: 1335px){
-    .root {
-        display: none;
-    }
-    .logo {
-        display: none;
-    }
+
+
+.rootbt {
+    display: none;
+}
+
+.headbt {
+    display: none;
 }
 
 .root {
@@ -44,4 +45,45 @@
 .menu_icon {
     margin-top: -3px;
     margin-right: 3px;
+}
+
+.curr {
+    display: none;
+}
+
+@media (max-width: 1335px){
+    .root {
+        display: none;
+    }
+    .logo {
+        z-index: 1;
+    }
+
+    .head {
+        height: 100vh;
+        width: 100vw !important;
+
+        position: absolute;
+        top: 24px;
+        left: 0;
+        z-index: 5;
+    }
+
+    .headbt {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        display: block;
+    }
+
+    .curr {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .curr > img {
+        border-radius: 50%;
+        margin-bottom: -15px;
+        border: 1px solid #005BE4;
+    }
 }

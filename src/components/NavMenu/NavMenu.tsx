@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Menu } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { Dropdown, Menu } from 'antd';
 import { AppstoreOutlined, ShoppingCartOutlined, SettingOutlined } from '@ant-design/icons';
 import s from './NavMenu.module.scss';
 import SubMenu from 'antd/lib/menu/SubMenu';
@@ -15,14 +15,19 @@ import BoxWH from './assets/BoxWH.png'
 import BoxBL from './assets/BoxBL.png'      //В макете иконка разбита на конструктор. нашёл в нете
 import CoinWH from './assets/CoinWH.png'
 import CoinBL from './assets/CoinBL.png'
-import Logo from './assets/Logo.png'
+import Logo from './assets/Logo.png';
+import Cross from './assets/Cross.png'
+import Currency from '../Currency/Currency';
+import Avatar from '../../assets/Avatar.png'
+
 
 interface INavMenu {
   className?: string
   place: string
+  update?: boolean
 }
 
-const NavMenu: React.FC<INavMenu> = ({place}) => {
+const NavMenu: React.FC<INavMenu> = ({place, update}) => {
 
   const [catalog, setCatalog] = useState(CatalogWH);
   const [cart, setCart] = useState(CartWH);
@@ -30,11 +35,21 @@ const NavMenu: React.FC<INavMenu> = ({place}) => {
   const [userIMG, setUserIMG] = useState(UserWH);
   const [box, setBox] = useState(BoxWH);
   const [coin, setCoin] = useState(CoinWH);
-  const [menuClass, setMenuClass] = useState('menu_text')
+
+  const [isHidden, setIsHidden] = useState(place);
+  const [first, setFirst] = useState(true)
 
   const handleClick = (e: any) => {
     console.log(e)
   }
+
+  useEffect(() => {
+    console.log('asd')
+    if(isHidden==='root' && !first) {
+      setIsHidden('head')
+    }
+    setFirst(false)
+  }, [update])
 
   return (
     <>
@@ -45,7 +60,7 @@ const NavMenu: React.FC<INavMenu> = ({place}) => {
         defaultOpenKeys={['sub1']}
         selectedKeys={[]}
         mode="inline"
-        className={s[place as keyof typeof s]}
+        className={s[isHidden as keyof typeof s]}
       >
       <div className={s.logo}>
         <img 
@@ -55,6 +70,20 @@ const NavMenu: React.FC<INavMenu> = ({place}) => {
           height='28.86'
         />
         <b>Flimcor</b>
+
+        <button
+          className={s[(isHidden + 'bt') as keyof typeof s]}
+          onClick={() => setIsHidden('root')}
+          style={{background: 'none', border: 'none'}}
+        >
+          <img src={Cross} alt="" width={12} height={12} />
+        </button>
+        <div className={s.curr}>
+
+          <img src={Avatar} alt=""/>
+          <Currency place="small"/>
+          
+        </div>
       </div>
         <Menu.Item key="1"  className={s.menu_item}
         onMouseEnter={() => {

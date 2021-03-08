@@ -14,7 +14,7 @@ import MenuBT from './MenuBT.png'
 
 const Header = () => {
 
-
+    const [update, setUpdate] = useState(true)
     const [currencies, setCurrencies] = useState<any>();
     const [list, setList] = useState<any>();
     const [current, setCurrent] = useState<any>('USD');
@@ -112,7 +112,6 @@ const Header = () => {
         >
             <div className={s.head_controls}>
                 {
-                    //@ts-ignore
                     <Dropdown overlay={list} trigger={['click']}>
                         <a className={s.droplink} onClick={e => e.preventDefault()}>
                             <div>1235 $</div>
@@ -124,13 +123,25 @@ const Header = () => {
                 <img src={Avatar} className={s.avatar} alt="" />
             </div>
 
-            <div className={s.burg}>
+            {/* <div className={s.burg}>
                 <Dropdown overlay={() => <NavMenu place="head"/>} trigger={['click']}>
-                    <a onClick={e => e.preventDefault()}>
+                    <a onClick={e => e.preventDefault()} className={s.drop_trigger}>
                             <img src={MenuBT} alt="" className={s.coin} />
                         </a>
                 </Dropdown>
+            </div> */}
+
+            <div className={s.burg}>
+                <button
+                    onClick={() => setUpdate(!update)}
+                    style={{background: 'none', border: 'none'}}
+                >
+                    <img src={MenuBT} alt="" className={s.coin} />
+                </button>
+                <NavMenu place='root' update={update} />
             </div>
+
+            
         </PageHeader>
     )
 }

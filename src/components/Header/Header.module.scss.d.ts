@@ -4,6 +4,7 @@ interface CssExports {
   'avatar': string;
   'burg': string;
   'coin': string;
+  'drop_trigger': string;
   'droplink': string;
   'head_controls': string;
   'header': string;
