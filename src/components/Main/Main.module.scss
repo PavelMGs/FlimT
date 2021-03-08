@@ -1,0 +1,632 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.addTo {
+    display: none;
+}
+
+.image {
+  margin: 82px 35px auto 30px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+
+  font: normal 14px "Roboto", serif;
+  margin-top: 103px;
+}
+
+.info > h2 {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  font-style: bold;
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+
+  width: 712px;
+  height: 106px;
+  border: 1px solid #ebeff4;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  margin-top: 19px;
+  margin-left: 39px;
+}
+
+.price > span {
+  display: flex;
+  flex-direction: row;
+
+  font: normal 15px "Roboto", serif;
+  color: #5b626d;
+  line-height: 20px;
+}
+
+.price > div {
+  font: normal 30px "Roboto", serif;
+  font-weight: 500;
+  color: #1d1d1d;
+  line-height: 35.16px;
+
+  margin-top: 16px;
+}
+
+.description {
+  width: 713px;
+  height: 120px;
+  margin-top: 36px;
+
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: #fafafa;
+
+  width: 447px;
+  height: 391px;
+
+  margin-top: 80px;
+  margin-left: 35px;
+}
+
+.code {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  color: #727983;
+  margin: 18px 113px 0 26px;
+}
+
+.code > div {
+  color: black;
+  margin-left: 3px;
+}
+
+.card > h3 {
+  font-size: 20px;
+  margin-left: 26px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+}
+
+.card_price {
+  font-size: 28px;
+  color: #005be4;
+
+  margin-top: -10px;
+  margin-left: 26px;
+}
+
+.shipping {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  margin-top: 21px;
+  margin-left: 27px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  width: 385px;
+  height: 128px;
+
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+
+  color: #5b626d;
+  line-height: 20px;
+  font-size: 20px;
+}
+.shipping > span > b {
+  color: black;
+}
+
+.add {
+  display: flex;
+  flex-direction: row;
+}
+
+.sum {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 27px;
+  margin-top: 20px;
+  margin-right: 29px;
+
+  color: #5b626d;
+  font-size: 14px;
+
+  width: 90px;
+}
+
+.sum > span {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+
+  margin-top: 5px;
+
+  color: #4e9616;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.icon {
+  font-weight: normal;
+  font-size: 16px;
+  color: #5b626d;
+  margin-left: 2px;
+}
+
+.cart_count {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 20px;
+}
+
+.numberInput {
+  font-size: 16px !important;
+  height: 50px !important;
+  width: 140px !important;
+  padding: 4px !important;
+}
+
+.button {
+  margin-top: 41px;
+  margin-left: 9px;
+  width: 107.94px;
+  height: 50px !important;
+  font-size: 16px !important;
+}
+
+.button > img {
+  margin-right: 12.62px;
+}
+
+.properties {
+  width: 451px;
+  height: 469px;
+  border-radius: 2px;
+  border: none;
+  background: #fbfbfb;
+  margin-left: 30px;
+  margin-top: -48.6px;
+}
+
+.properties > h3 {
+  margin-top: 23px;
+  margin-left: 18px;
+  font-size: 18px;
+}
+
+.column {
+  background-color: #fbfbfb !important;
+  line-height: 36px;
+  font-size: 14px;
+  padding: 0px !important;
+}
+
+@media (max-width: 1900px) {
+  // .properties {
+  //     margin-top: 0px;
+  //     margin-right: 5px;
+  //     margin-left: auto;
+  // }
+
+  .root {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-around;
+  }
+
+  .image {
+    width: 375.83px;
+    height: 325.83px;
+  }
+}
+
+@media (max-height: 900px) and (max-width: 1600px) {
+  .properties {
+      margin-top: 5px;
+      height: 280px;
+  }
+  .image {
+    width: 375.83px;
+    height: 325.83px;
+  }
+
+  .column {
+    line-height: 26px;
+    font-size: 14px;
+  }
+
+  .card {
+    margin-top: 5px;
+  }
+
+  .code {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    color: #727983;
+    margin: 13px 113px 0 26px;
+  }
+
+  .code > div {
+    color: black;
+    margin-left: 3px;
+  }
+  
+  .card > h3 {
+    font-size: 20px;
+    margin-left: 26px;
+    font-weight: 600;
+  }
+  
+  .card_price {
+    font-size: 28px;
+    color: #005be4;
+  
+    margin-top: -10px;
+    margin-left: 26px;
+  }
+  
+  .shipping {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
+    margin-top: 9px;
+    margin-left: 27px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  
+    width: 385px;
+    height: 108px;
+  
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+  
+    color: #5b626d;
+    line-height: 20px;
+    font-size: 20px;
+  }
+  .shipping > span > b {
+    color: black;
+  }
+  
+  .add {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .sum {
+    display: flex;
+    flex-direction: column;
+  
+    margin-left: 27px;
+    margin-top: 9px;
+    margin-right: 29px;
+  
+    color: #5b626d;
+    font-size: 14px;
+  
+    width: 90px;
+  }
+  
+  .sum > span {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  
+    margin-top: 5px;
+  
+    color: #4e9616;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .cart_count {
+    display: flex;
+    flex-direction: column;
+  
+    margin-top: 9px;
+  }
+  
+  .numberInput {
+    font-size: 16px !important;
+    height: 35px !important;
+    width: 125px !important;
+    padding: 0px !important;
+  }
+  
+  .button {
+    margin-top: 31px;
+    margin-left: 9px;
+    width: 82.94px;
+    height: 35px !important;
+    font-size: 16px !important;
+    padding: 0 !important;
+  }
+  
+  .button > img {
+    margin-right: 12.62px;
+  }
+}
+
+@media (max-width: 1335px) {
+    .root {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 100%;
+    }
+
+    .addTo {
+        display: flex;
+
+        justify-content: space-between;
+        margin-top: 65px;
+        
+        width: 375px;
+        height: 75px;
+
+        border: 1px solid blue;
+    }
+
+    .addTo > span {
+        display: flex;
+        flex-direction: row;
+
+        margin-top: 16px;
+        margin-left: 13px;
+        color: #005BE4;
+        font-size: 26px;
+    }
+    
+    .addTo .icon {
+        height: 32px;
+        text-align: center;
+        margin-top: 13px;
+    }
+
+    .addTo > div > input {
+        height: 47px;
+        width: 32px;
+
+        
+        border: none;
+
+        text-align: center;
+    }
+    .actionInp {
+        height: 47px;
+        width: 32px;
+        background-color: #F3F3FB;
+
+        border: none;
+        
+        
+    }
+
+    .toCart {
+        height: 47px !important;
+        width: 55px;
+    }
+
+    .addTo > div {
+        border-radius: 3px;
+        height: 47px;
+        margin-top: 15px;
+        margin-bottom: 13px;
+        margin-right: 15px;
+    }
+
+    .image {
+        width: 349px;
+        height: 303px;
+        margin: 0;
+        margin-top: 16px;
+      }
+      .info {
+        margin-top: 111px;
+      }
+
+      .info > h2 {
+          font-size: 20px;
+          text-align: center;
+      }
+
+      .description {
+          width: 358px;
+          height: 260px;
+          margin-top: 97px;
+          margin-left: 16px;
+      }
+
+      .prices {
+          width: 367px;
+          height: 74px;
+      }
+
+      
+.price {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    margin: 0;
+  }
+  
+  .price > span {
+    display: flex;
+    flex-direction: row;
+  
+    font: normal 12px "Roboto", serif;
+    font-weight: 400;
+    color: #5b626d;
+    line-height: 20px;
+
+    margin-top: 9px;
+    margin-left: 20px;
+  }
+  
+  .price > div {
+    font: normal 24px "Roboto", serif;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 28.13px;
+
+    
+ 
+  }
+
+  .icon {
+    font-weight: normal;
+    font-size: 16px;
+    color: #5b626d;
+    margin-left: 2px;
+  }
+
+  .card {
+      margin-top: 51px;
+      margin-left: auto;
+      margin-right: auto;
+
+      width: 356px;
+      height: 360px;
+
+      order: 3;
+
+      background-color: #FBFBFB;
+  }
+
+  
+  .code {
+    margin: 14px 113px 0 17px;
+  }
+  
+  .code > div {
+    color: black;
+    margin-left: 3px;
+  }
+  
+  .card > h3 {
+    margin-left: 17px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .card_price {
+    margin-left: 17px;
+  }
+
+  
+.shipping {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
+    margin-top: 21px;
+    margin-left: 17px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  
+    width: 321px;
+    height: 128px;
+  
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+  
+    color: #5b626d;
+    line-height: 20px;
+    font-size: 15px;
+  }
+  .shipping > span > b {
+    color: black;
+  }
+  
+  .add {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .sum {
+    display: flex;
+    flex-direction: column;
+  
+    margin-left: 17px;
+    margin-top: 15px;
+    margin-right: 25px;
+  
+    color: #5b626d;
+    font-size: 14px;
+  
+    width: 90px;
+  }
+  
+  .sum > span {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  
+    margin-top: 5px;
+  
+    color: #4e9616;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .numberInput {
+    font-size: 16px !important;
+    height: 50px !important;
+    width: 103px !important;
+    padding: 4px !important;
+  }
+  
+  .button {
+    margin-top: 40px;
+    margin-left: 6.15px;
+    width: 93.8px;
+    height: 50px !important;
+    font-size: 16px !important;
+  }
+  
+  .button > img {
+    margin-right: 12.62px;
+  }
+
+  .properties {
+      width: 375px;
+      height: 357px;
+      margin-left: auto;
+
+  }
+  
+  .column {
+      font-size: 14px;
+      line-height: 33.5px;
+  }
+
+}

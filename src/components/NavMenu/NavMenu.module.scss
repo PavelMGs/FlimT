@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@media (max-width: 1335px){
+    .root {
+        display: none;
+    }
+    .logo {
+        display: none;
+    }
+}
+
+.root {
+    width: 180px !important; //перебиваем стили антд
+    height: 100vh;
+}
+
+.logo {
+    color: white;
+    font: normal 22px 'Baloo', serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin: 15px 33.03px 30px 28.6px;
+}
+
+.logo > img {
+    margin-right: 10px;
+    margin-top: -7px;
+}
+
+.menu_item {
+    font-weight: 500;
+    font: normal 14px "Roboto", serif;
+    line-height: 16.41px;
+}
+
+.menu_item:hover {
+    color: #4c7eff !important;
+}
+
+.five {
+    color: white;
+}
+
+.menu_icon {
+    margin-top: -3px;
+    margin-right: 3px;
+}
